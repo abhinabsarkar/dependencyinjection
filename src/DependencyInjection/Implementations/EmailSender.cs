@@ -8,7 +8,7 @@ namespace DependencyInjection.Implementations
     {
         public async Task ActOnNotification(string message)
         {
-            // Write to event log here            
+            // Write code to send email here            
             await Console.Out.WriteLineAsync("EmailSender: Message sent - " + message);
         }
     }
