@@ -27,6 +27,7 @@ namespace DotnetCoreDI
             //var appInsightsLoggerService = _serviceProvider.GetService<IMessageLogger>();
             //await appInsightsLoggerService.WriteMessage("DI method");
 
+            // Use the IEnumerable interface and then find the instance you want using LINQ
             IEnumerable<IMessageLogger> services = _serviceProvider.GetServices<IMessageLogger>();
             var messageLoggerService = services.Where(s => s.Name == "MessageLogger").Single();
             await messageLoggerService.WriteMessage("Log in console");
@@ -34,6 +35,7 @@ namespace DotnetCoreDI
             var appInsightsLoggerService = services.Where(s => s.Name == "AppInsightsLogger").Single();
             await appInsightsLoggerService.WriteMessage("Log in appinsights");
 
+            // Calling Dispose() on service provider is mandatory as otherwise registered instances will not get disposed. 
             DisposeServices();
 
             Console.ReadLine();
