@@ -30,3 +30,8 @@ await serviceA.DoSomeThing("My implementation");
 var serviceB = services.Where(s => s.Name == "B").Single();
 await serviceB.DoSomeThing("Another implementation");
 ```
+
+## References
+
+* [Dependency injection in .NET Core console applications](https://gunnarpeipman.com/net/net-core-dependency-injection/)
+* [How to register multiple implementation of the same interface in ASP.Net core?](https://stackoverflow.com/questions/39174989/how-to-register-multiple-implementations-of-the-same-interface-in-asp-net-core)
