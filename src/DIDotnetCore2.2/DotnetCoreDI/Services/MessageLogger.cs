@@ -10,6 +10,9 @@ namespace DotnetCoreDI.Services
     {
         private readonly string _messageWriter;
 
+        // Added this property to resolve the named instance 
+        // Since Microsoft.Extensions.DependencyInjection doesn't support registering multiple implementations 
+        // of the same interface, this name is used to resolve the instance using LINQ
         public string Name { get { return this.GetType().Name; } }
 
         // Constructor dependency injection
