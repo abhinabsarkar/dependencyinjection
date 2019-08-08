@@ -4,7 +4,7 @@ Dependency Injection makes design extensible by allowing to add a new implementa
 
 ![Alt text](/images/di-explanation.jpg)
 
-In this case (see sample [code](/src/DIConcepts/DependencyInjection)), adding implementation class "EmailSender", which is extended from the abstract class (Interface) INotificationAction. It is done by passing the object of the concrete class into the constructor of the dependent class (*Constructor Injection*). Dependency Injection can be done in 3 ways - Constructor, Method & Property Injection.
+In this case (see sample [code](/src/DIConcepts/DependencyInjection)), adding implementation class "EmailSender", which is extended from the abstract class (Interface) INotification. It is done by passing the object of the concrete class into the constructor of the dependent class (*Constructor Injection*). Dependency Injection can be done in 3 ways - Constructor, Method & Property Injection.
 
 ```csharp
 // In Program.cs
